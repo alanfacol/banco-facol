@@ -1,5 +1,7 @@
 package com.alan.facol.src.domain;
 
+import com.alan.facol.src.enums.OpcoesSexo;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -9,6 +11,7 @@ public abstract class Funcionario {
     private String nome;
     private String cpf;
     private LocalDateTime dtNascimento;
+    private OpcoesSexo sexo;
     private BigDecimal salario;
     private Bonificacao bonificacao;
     private boolean ativo;
@@ -45,6 +48,14 @@ public abstract class Funcionario {
 
     public void setDtNascimento(LocalDateTime dtNascimento) {
         this.dtNascimento = dtNascimento;
+    }
+
+    public OpcoesSexo getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(OpcoesSexo sexo) {
+        this.sexo = sexo;
     }
 
     public BigDecimal getSalario() {

@@ -1,5 +1,7 @@
 package com.alan.facol.src.domain;
 
+import com.alan.facol.src.enums.OpcoesSexo;
+
 import java.time.LocalDateTime;
 
 public class Cliente {
@@ -8,6 +10,7 @@ public class Cliente {
     private String cpf;
     private String nome;
     private LocalDateTime data_nascimento;
+    private OpcoesSexo sexo;
     private boolean ativo;
 
     public Cliente() {
@@ -43,6 +46,14 @@ public class Cliente {
 
     public void setData_nascimento(LocalDateTime data_nascimento) {
         this.data_nascimento = data_nascimento;
+    }
+
+    public OpcoesSexo getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(OpcoesSexo sexo) {
+        this.sexo = sexo;
     }
 
     public boolean isAtivo() {

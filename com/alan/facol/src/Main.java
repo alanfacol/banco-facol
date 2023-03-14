@@ -1,6 +1,7 @@
 package com.alan.facol.src;
 
 import com.alan.facol.src.domain.*;
+import com.alan.facol.src.enums.OpcoesSexo;
 import com.alan.facol.src.service.ClienteService;
 import com.alan.facol.src.service.ContaService;
 import com.alan.facol.src.service.FuncionarioService;
@@ -23,14 +24,16 @@ public class Main {
         c1.setId(1);
         c1.setNome("Amanda");
         c1.setCpf("11111111111");
-        c1.setData_nascimento(LocalDateTime.of(LocalDate.of(1999, 03, 20), LocalTime.of(00, 00)));
+        c1.setData_nascimento(LocalDateTime.of(LocalDate.of(1999, 3, 20), LocalTime.of(0, 0)));
+        c1.setSexo(OpcoesSexo.FEMININO);
         c1.setAtivo(true);
 
         Cliente c2 = new Cliente();
         c2.setId(2);
         c2.setNome("Bruna");
         c2.setCpf("11111111112");
-        c2.setData_nascimento(LocalDateTime.of(LocalDate.of(1997, 10, 03), LocalTime.of(00,00)));
+        c2.setData_nascimento(LocalDateTime.of(LocalDate.of(1997, 10, 3), LocalTime.of(0,0)));
+        c1.setSexo(OpcoesSexo.FEMININO);
         c2.setAtivo(true);
 
         clienteService.adicionar(c1);
@@ -41,6 +44,8 @@ public class Main {
         func.setId(1);
         func.setNome("Alan");
         func.setCpf("22222222222");
+        func.setDtNascimento(LocalDateTime.of(LocalDate.of(1998, 3, 20), LocalTime.of(0, 0)));
+        func.setSexo(OpcoesSexo.MASCULINO);
         func.setSalario(BigDecimal.valueOf(1200.00));
         func.setBonificacao(new Bonificacao(1, "Bonificação por Operador", 0.2));
         func.setAtivo(true);
@@ -49,6 +54,8 @@ public class Main {
         gerente.setId(2);
         gerente.setNome("Ronaldo");
         gerente.setCpf("33333333333");
+        gerente.setDtNascimento(LocalDateTime.of(LocalDate.of(1986, 7, 11), LocalTime.of(0, 0)));
+        gerente.setSexo(OpcoesSexo.MASCULINO);
         gerente.setSalario(BigDecimal.valueOf(2300.00));
         gerente.setBonificacao(new Bonificacao(1, "Bonificacao por Gerente", 0.35));
         gerente.setAtivo(true);
