@@ -2,6 +2,7 @@ package com.alan.facol.src;
 
 import com.alan.facol.src.domain.*;
 import com.alan.facol.src.enums.OpcoesSexo;
+import com.alan.facol.src.enums.TipoFuncionario;
 import com.alan.facol.src.service.ClienteService;
 import com.alan.facol.src.service.ContaService;
 import com.alan.facol.src.service.FuncionarioService;
@@ -46,6 +47,7 @@ public class Main {
         func.setCpf("22222222222");
         func.setDtNascimento(LocalDateTime.of(LocalDate.of(1998, 3, 20), LocalTime.of(0, 0)));
         func.setSexo(OpcoesSexo.MASCULINO);
+        func.setTipo(TipoFuncionario.OPERADOR);
         func.setSalario(BigDecimal.valueOf(1200.00));
         func.setBonificacao(new Bonificacao(1, "Bonificação por Operador", 0.2));
         func.setAtivo(true);
@@ -56,6 +58,7 @@ public class Main {
         gerente.setCpf("33333333333");
         gerente.setDtNascimento(LocalDateTime.of(LocalDate.of(1986, 7, 11), LocalTime.of(0, 0)));
         gerente.setSexo(OpcoesSexo.MASCULINO);
+        gerente.setTipo(TipoFuncionario.GERENTE);
         gerente.setSalario(BigDecimal.valueOf(2300.00));
         gerente.setBonificacao(new Bonificacao(1, "Bonificacao por Gerente", 0.35));
         gerente.setAtivo(true);
