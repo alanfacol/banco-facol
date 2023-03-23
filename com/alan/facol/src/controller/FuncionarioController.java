@@ -12,7 +12,11 @@ public class FuncionarioController {
 
     }
 
-    public static List<Funcionario> listarGerentes() {
+    public static List<Funcionario> listarTodos(){
+        return FuncionarioMock.listarFuncionarios();
+    }
+
+    public List<Funcionario> listarGerentes() {
 
         List<Funcionario> funcionarios = FuncionarioMock.listarFuncionarios();
 
@@ -24,7 +28,7 @@ public class FuncionarioController {
         return funcionarios;
     }
 
-    public static List<Funcionario> listarOperadores(){
+    public List<Funcionario> listarOperadores(){
         List<Funcionario> funcionarios = FuncionarioMock.listarFuncionarios();
 
         for (int i = 0; i < funcionarios.size(); i++) {
