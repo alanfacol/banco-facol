@@ -92,7 +92,7 @@ public abstract class Conta {
 
     @Override
     public String toString() {
-        return "Conta{\n" +
+        return "\nConta{" +
                 "id=" + id +
                 ", agencia='" + agencia + '\'' +
                 ", dataCriacao=" + dataCriacao +
@@ -101,6 +101,6 @@ public abstract class Conta {
                 ", funcionario=" + funcionario +
                 ", imposto=" + imposto +
                 ", aberta=" + aberta +
-                "\n}";
+                "}";
     }
 }

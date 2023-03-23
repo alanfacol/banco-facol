@@ -95,7 +95,7 @@ public abstract class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario{" +
+        return "\nFuncionario{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", cpf='" + cpf + '\'' +
