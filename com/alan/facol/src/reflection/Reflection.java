@@ -25,7 +25,7 @@ public class Reflection {
 
         } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException | IllegalAccessException |
                  InvocationTargetException e) {
-            throw new RuntimeException(e);
+            return "{Error: URL inválida}";
         }
     }
 
