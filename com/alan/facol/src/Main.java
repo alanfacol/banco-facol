@@ -6,7 +6,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // URLs a serem testadas: /conta/listarContas, /funcionario/listarGerentes, /funcionario/listarOperadores
+        /* URLs a serem testadas:
+            /conta/listarContas,
+            /funcionarios/listarTodos
+            /funcionario/listarGerentes
+            /funcionario/listarOperadores
+            /cliente/listarTodos
+         */
 
         Request request = new Request("/funcionario/listarGerentes");
         Object obj = request.response();
