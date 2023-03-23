@@ -1,7 +1,5 @@
 package com.alan.facol.src.domain;
 
-import java.math.BigDecimal;
-
 public class Bonificacao {
 
     private int id;
@@ -39,5 +37,14 @@ public class Bonificacao {
 
     public void setPercentual(double percentual) {
         this.percentual = percentual;
+    }
+
+    @Override
+    public String toString() {
+        return "Bonificacao{" +
+                "id=" + id +
+                ", descricao='" + descricao + '\'' +
+                ", percentual=" + percentual +
+                '}';
     }
 }

@@ -1,7 +1,5 @@
 package com.alan.facol.src.domain;
 
-import java.math.BigDecimal;
-
 public class Imposto extends Conta{
 
     private int id;
@@ -39,5 +37,14 @@ public class Imposto extends Conta{
 
     public void setJuros(double juros) {
         this.juros = juros;
+    }
+
+    @Override
+    public String toString() {
+        return "Imposto{" +
+                "id=" + id +
+                ", descricao='" + descricao + '\'' +
+                ", juros=" + juros +
+                '}';
     }
 }

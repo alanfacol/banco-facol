@@ -92,4 +92,19 @@ public abstract class Funcionario {
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
     }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", dtNascimento=" + dtNascimento +
+                ", sexo=" + sexo +
+                ", tipo=" + tipo +
+                ", salario=" + salario +
+                ", bonificacao=" + bonificacao +
+                ", ativo=" + ativo +
+                '}';
+    }
 }

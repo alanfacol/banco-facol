@@ -89,4 +89,18 @@ public abstract class Conta {
     public void retirar(BigDecimal v){
         this.saldo = this.saldo.subtract(v);
     }
+
+    @Override
+    public String toString() {
+        return "Conta{\n" +
+                "id=" + id +
+                ", agencia='" + agencia + '\'' +
+                ", dataCriacao=" + dataCriacao +
+                ", saldo=" + saldo +
+                ", cliente=" + cliente +
+                ", funcionario=" + funcionario +
+                ", imposto=" + imposto +
+                ", aberta=" + aberta +
+                "\n}";
+    }
 }
