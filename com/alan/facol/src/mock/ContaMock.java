@@ -23,21 +23,44 @@ public class ContaMock {
     public static List<Conta> listarContas() {
 
         List<Conta> contas = new ArrayList<>();
+        Conta[] arrayContas = new Conta[3];
 
-        Conta contaAmanda = new ContaCorrente();
+        arrayContas[0] = new ContaCorrente();
+        arrayContas[0].setId(1);
+        arrayContas[0].setCliente(ClienteMock.listarClientes().get(1));
+        arrayContas[0].setAgencia("0232-1");
+        arrayContas[0].setSaldo(BigDecimal.ZERO);
+        arrayContas[0].adicionar(BigDecimal.valueOf(200));
+        arrayContas[0].setDataCriacao(LocalDateTime.now());
+        arrayContas[0].setFuncionario(FuncionarioMock.listarFuncionarios().get(1));
+        arrayContas[0].setImposto(new Imposto(1, "Imposto sobre Conta Corrente", 0.03));
+        arrayContas[0].setAberta(true);
 
-        contaAmanda.setId(1);
-        contaAmanda.setCliente(ClienteMock.listarClientes().get(1));
-        contaAmanda.setAgencia("0232-1");
-        contaAmanda.setSaldo(BigDecimal.ZERO);
-        contaAmanda.adicionar(BigDecimal.valueOf(200));
-        contaAmanda.setDataCriacao(LocalDateTime.now());
-        contaAmanda.setFuncionario(FuncionarioMock.listarFuncionarios().get(1));
-        contaAmanda.setImposto(new Imposto(1, "Imposto sobre Conta Corrente", 0.03));
-        contaAmanda.setAberta(true);
+        arrayContas[1] = new ContaCorrente();
+        arrayContas[1].setId(2);
+        arrayContas[1].setCliente(ClienteMock.listarClientes().get(2));
+        arrayContas[1].setAgencia("0232-1");
+        arrayContas[1].setSaldo(BigDecimal.ZERO);
+        arrayContas[1].adicionar(BigDecimal.valueOf(4000));
+        arrayContas[1].setDataCriacao(LocalDateTime.now());
+        arrayContas[1].setFuncionario(FuncionarioMock.listarFuncionarios().get(0));
+        arrayContas[1].setImposto(new Imposto(1, "Imposto sobre Conta Corrente", 0.04));
+        arrayContas[1].setAberta(true);
 
-        contas.add(contaAmanda);
+        arrayContas[2] = new ContaCorrente();
+        arrayContas[2].setId(3);
+        arrayContas[2].setCliente(ClienteMock.listarClientes().get(0));
+        arrayContas[2].setAgencia("0232-1");
+        arrayContas[2].setSaldo(BigDecimal.ZERO);
+        arrayContas[2].adicionar(BigDecimal.valueOf(2500));
+        arrayContas[2].setDataCriacao(LocalDateTime.now());
+        arrayContas[2].setFuncionario(FuncionarioMock.listarFuncionarios().get(2));
+        arrayContas[2].setImposto(new Imposto(1, "Imposto sobre Conta Corrente", 0.02));
+        arrayContas[2].setAberta(true);
 
+        for (int i = 0; i < arrayContas.length; i++) {
+            contas.add(arrayContas[i]);
+        }
         return contas;
     }
 }
