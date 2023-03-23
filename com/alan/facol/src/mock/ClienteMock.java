@@ -31,7 +31,7 @@ public class ClienteMock {
         c2.setNome("Bruna");
         c2.setCpf("11111111112");
         c2.setData_nascimento(LocalDateTime.of(LocalDate.of(1997, 10, 3), LocalTime.of(0,0)));
-        c1.setSexo(OpcoesSexo.FEMININO);
+        c2.setSexo(OpcoesSexo.FEMININO);
         c2.setAtivo(true);
 
         clientes.add(c1);
